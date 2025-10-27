@@ -1,19 +1,16 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Dashboard } from './pages/Dashboard'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Dashboard } from './pages/Dashboard';
 
 function App() {
   return (
-    <>
-     <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-        <Route Component={Dashboard} path='/dashboard' />
+        {/* Página inicial */}
+        <Route path="/" element={<Dashboard />} />
+        {/* Outras páginas */}
       </Routes>
-     </BrowserRouter>
-     
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
