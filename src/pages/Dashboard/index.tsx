@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react"
-import axios from "axios";
-import { Estatistcs } from "../../components/EstatisticCards";
-import type { IEstatistics } from "../../components/EstatisticCards/interfaces";
 import { Container, Content, Question } from "./styles";
 
 export const Dashboard = () => {
@@ -12,7 +9,6 @@ export const Dashboard = () => {
     
 
 async function fetchQuestion() {
-
     const res = await fetch(`https://api.truthordarebot.xyz/v1/${type}?rating=${rating}`);
     const data = await res.json();
     // Aqui você poderia traduzir automaticamente se quiser
